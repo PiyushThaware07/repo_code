@@ -1,7 +1,8 @@
 "use client"
 // components/Breadcrumbs.js
 import { usePathname, useRouter } from 'next/navigation';
-import { TbHome } from "react-icons/tb";
+// ICONS
+import { GoHomeFill } from "react-icons/go";
 
 
 const Breadcrumbs = () => {
@@ -11,20 +12,20 @@ const Breadcrumbs = () => {
 
 
   return (
-    <nav className="flex mb-4">
-      <ul className="flex flex-nowrap items-center gap-2">
-        <li className="cursor-pointer hover:text-blue-500 text-[13px]" onClick={()=>router.push("/")}><TbHome className="text-xl" /></li>
-        {
-          pathNames.map((item,index)=>(
-            <li key={index} className="text-sm capitalize flex flex-nowrap items-center gap-2"> 
-            <h1 className="text-lg">/</h1>
-            <h1 className="text-[13px] cursor-pointer hover:text-blue-500">{item}</h1>
-            </li>
-          ))
-        }
-        </ul>
-    </nav>
-  );
+     <div className='text-white/20 mb-5'>
+            <ul className='flex flex-nowrap items-center'>
+                <li><GoHomeFill className='text-xl cursor-pointer text-indigo-600' onClick={() => router.push("/")} /></li>
+                {
+                    pathNames.map((item, index) => (
+                        <li key={index}>
+                            <span className='text-sm font-semibold mx-2'>/</span>
+                            <span className='text-sm capitalize cursor-pointer hover:text-indigo-600' onClick={() => router.push(`/${item}`)}>{item}</span>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+  )
 };
 
 export default Breadcrumbs;
