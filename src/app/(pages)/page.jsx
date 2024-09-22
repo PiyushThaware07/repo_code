@@ -17,7 +17,7 @@ export default function page() {
 
             {/* Content */}
             <main className="p-6 w-full max-w-7xl mx-auto">
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 p-10 max-w-7xl mx-auto'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 md:p-10 max-w-7xl mx-auto'>
                     {
                         new Array(5).fill(null).map((_, index) => (
                             <div key={index} className="border-[1.5px] border-white/10 p-5 rounded-2xl min-h-[180px]">
