@@ -16,7 +16,6 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +23,58 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+/* EDITOR */
+/* prism-custom.css */
+
+/* Pure black background and white foreground */
+pre,
+code {
+  background: #000000 !important;
+  /* Pure black background */
+  color: #ffffff !important;
+  /* White text by default */
+  font-family: 'Fira Code', 'Courier New', monospace;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+/* Customize specific syntax elements */
+.token.comment {
+  color: #a8a8a8;
+  /* Green for comments */
+}
+
+.token.string {
+  color: #00bfff;
+  /* Yellow for strings */
+}
+
+.token.function {
+  color: #0077ff;
+  /* Blue for function names */
+}
+
+.token.keyword {
+  color: #0077ff;
+  /* Orange for keywords */
+}
+
+.token.operator {
+  color: #ffffff;
+  /* White for operators like =, +, etc. */
+}
+
+/* Customize brackets, parentheses */
+.token.punctuation {
+  color: #ffffff;
+  /* White for punctuation (like parentheses, brackets, etc.) */
+}
+
+/* Line numbers (optional) */
+pre[class*="language-"]::before {
+  color: #555555;
+  /* Grey for line numbers if enabled */
 }
