@@ -1,0 +1,4 @@
+{
+  "/(pages)/page": "app/(pages)/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}
